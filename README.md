@@ -69,7 +69,7 @@ m->ol_flags |= (RTE_MBUF_F_TX_IPV4 | RTE_MBUF_F_TX_IP_CKSUM);
 ```
 
 UDP(L4)Txチェックサムオフロード
-```
+```c
 m->ol_flags |= (RTE_MBUF_F_TX_IPV4 | RTE_MBUF_F_TX_UDP_CKSUM);
 
 // 疑似ヘッダの計算が必要

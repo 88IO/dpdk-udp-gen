@@ -34,8 +34,8 @@ port_init(uint16_t port, struct rte_mempool *mbuf_pool)
 		.txmode = {
 			.offloads =
 				RTE_ETH_TX_OFFLOAD_IPV4_CKSUM  |
-				RTE_ETH_TX_OFFLOAD_UDP_CKSUM   |
-		},
+				RTE_ETH_TX_OFFLOAD_UDP_CKSUM  
+		}
 	};
 	struct rte_eth_txconf txconf;
 	struct rte_eth_rxconf rxconf;
@@ -247,7 +247,7 @@ main(int argc, char *argv[])
 
 	/* Check that there is an even number of ports to send/receive on. */
 	nb_ports = rte_eth_dev_count_avail();
-	else if (nb_ports == 0)
+	if (nb_ports == 0)
 		rte_exit(EXIT_FAILURE, "Cannot find avail port.\n");
 
 	/* Creates a new mempool in memory to hold the mbufs. */

@@ -11,8 +11,8 @@ struct rte_eth_conf port_conf = {
     .txmode = {
         .offloads =
             RTE_ETH_TX_OFFLOAD_IPV4_CKSUM  |
-            RTE_ETH_TX_OFFLOAD_UDP_CKSUM   |
-    },
+            RTE_ETH_TX_OFFLOAD_UDP_CKSUM 
+    }
 };
 ```
 

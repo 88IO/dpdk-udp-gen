@@ -80,6 +80,18 @@ uint32_t pseudo_cksum = csum32_add(
 udph->dgram_cksum = csum16_add(pseudo_cksum & 0xFFFF, pseudo_cksum >> 16);
 ```
 
+### 受信側動作確認
+
+```
+tcpdump -vvv
+```
+
+例
+```
+09:13:14.173826 IP (tos 0x0, ttl 64, id 0, offset 0, flags [none], proto UDP (17), length 114)
+    192.168.0.31.1000 > 192.168.0.32.2000: [udp sum ok] UDP, length 86
+```
+
 ### 参考
 
 https://doc.dpdk.org/guides/nics/features.html

@@ -1,6 +1,6 @@
 ## DPDK UDP PACKET GENERATOR
 
-- UDPパケットを生成して送信するDPDKアプリケーション
+UDPパケットを生成して送信するDPDKアプリケーション
 
 ### Txチェックサムオフロード
 

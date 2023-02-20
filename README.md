@@ -80,6 +80,13 @@ uint32_t pseudo_cksum = csum32_add(
 udph->dgram_cksum = csum16_add(pseudo_cksum & 0xFFFF, pseudo_cksum >> 16);
 ```
 
+### 実行例
+
+```
+make
+./build/udp_gen
+```
+
 ### 受信側動作確認
 
 ```
